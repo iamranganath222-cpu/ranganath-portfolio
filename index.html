@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>T. B. Ranganath | Interactive Portfolio</title>
+    <meta
+      name="description"
+      content="Interactive portfolio for T. B. Ranganath, Senior Telecommunications and Analytics Engineer."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="T. B. Ranganath portfolio home">TBR</a>
+      <nav aria-label="Portfolio sections">
+        <a href="#profile">Profile</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#ai-workflow">AI Workflow</a>
+        <a href="#education">Education</a>
+      </nav>
+      <a class="contact-pill" href="mailto:iamranganath222@gmail.com">Contact</a>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <video class="hero-video hero-video-bg" autoplay muted loop playsinline preload="metadata">
+          <source src="./assets/hero-horizon.mp4" type="video/mp4" />
+        </video>
+        <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata">
+          <source src="./assets/hero-horizon.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+
+        <div class="signal-grid" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="hero-layout">
+          <div class="hero-content reveal">
+            <p class="eyebrow">Telecom Operations · BI Analytics · AI Automation</p>
+            <h1><span>T. B.</span><span>Ranganath</span></h1>
+            <p class="hero-copy">
+              Senior Telecommunications and Analytics Engineer building Power BI dashboards,
+              network operation systems, and AI-assisted workflows that turn network noise into
+              decisions, savings, and measurable uptime.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="button primary">View Work</a>
+              <a href="#ai-workflow" class="button ghost">AI Workflow</a>
+              <a href="https://linkedin.com/in/ranganath-b-b294159a" class="button ghost">LinkedIn</a>
+            </div>
+          </div>
+
+          <aside class="hero-console reveal" aria-label="Live portfolio intelligence console">
+            <div class="console-topline">
+              <span class="status-dot"></span>
+              <span>Network Intelligence Console</span>
+            </div>
+            <div class="console-orbit" aria-hidden="true">
+              <span></span>
+              <i></i>
+            </div>
+            <dl class="console-readouts">
+              <div>
+                <dt>FCR</dt>
+                <dd>95%</dd>
+              </div>
+              <div>
+                <dt>Uptime</dt>
+                <dd>99.5%</dd>
+              </div>
+              <div>
+                <dt>Incidents</dt>
+                <dd>3,000+</dd>
+              </div>
+              <div>
+                <dt>AI Layer</dt>
+                <dd>Gemini · Perplexity · Claude</dd>
+              </div>
+            </dl>
+            <div class="console-log">
+              <span>SQL model optimized</span>
+              <span>SLA risk predicted</span>
+              <span>Power BI executive view ready</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="impact-ribbon" aria-label="Portfolio impact highlights">
+          <div>
+            <strong>35%</strong>
+            <span>Faster ticket resolution</span>
+          </div>
+          <div>
+            <strong>60%</strong>
+            <span>Manual workflow reduction</span>
+          </div>
+          <div>
+            <strong>18%</strong>
+            <span>NOC performance lift</span>
+          </div>
+        </div>
+
+        <div class="video-controls" aria-label="Video controls">
+          <button class="icon-button" id="playToggle" type="button" aria-label="Pause video">Pause</button>
+          <button class="icon-button" id="muteToggle" type="button" aria-label="Unmute video">Sound</button>
+        </div>
+        <button class="sound-hint" id="soundHint" type="button">Tap for sound</button>
+        <a class="scroll-cue" href="#profile" aria-label="Scroll to profile"><span></span></a>
+      </section>
+
+      <section class="section profile" id="profile">
+        <div class="section-kicker">Profile</div>
+        <div class="profile-grid">
+          <div>
+            <h2>Turning telecom complexity into clear operational intelligence.</h2>
+            <p>
+              With 10+ years across Ericsson, Huawei, L&amp;T Technology Services, and ZTE,
+              Ranganath brings together RAN operations, network optimization, ticket lifecycle
+              analytics, SQL, Power BI, IoT monitoring, enterprise reporting, and AI-assisted
+              research workflows for faster analysis and clearer decision-making.
+            </p>
+            <div class="signature-stack" aria-label="Signature working style">
+              <span>RAN operations depth</span>
+              <span>BI storytelling</span>
+              <span>AI research acceleration</span>
+              <span>Executive-ready metrics</span>
+            </div>
+          </div>
+          <div class="metric-panel" aria-label="Career impact metrics">
+            <div><strong>10+</strong><span>Years experience</span></div>
+            <div><strong>99.5%</strong><span>Network uptime achieved</span></div>
+            <div><strong>31%</strong><span>Ticket hops reduction</span></div>
+            <div><strong>₹1.4 Cr</strong><span>Annual savings identified</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-kicker">Skills</div>
+        <div class="section-heading">
+          <h2>Core capability map</h2>
+          <p>Select a domain to focus the skill view.</p>
+        </div>
+        <div class="skill-tabs" role="tablist" aria-label="Skill categories">
+          <button class="tab active" type="button" data-skill="analytics">Analytics</button>
+          <button class="tab" type="button" data-skill="data">SQL &amp; Data</button>
+          <button class="tab" type="button" data-skill="telecom">Telecom</button>
+          <button class="tab" type="button" data-skill="tools">Tools</button>
+          <button class="tab" type="button" data-skill="ai">AI &amp; Prompting</button>
+        </div>
+        <div class="skill-stage" id="skillStage" aria-live="polite"></div>
+      </section>
+
+      <section class="section split" id="experience">
+        <div>
+          <div class="section-kicker">Experience</div>
+          <h2>Progression through network operations, integration, IoT, and analytics.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Jan 2023 - Present</span>
+            <h3>Senior Engineer - Technical Domain Authority · Ericsson Global Services</h3>
+            <p>Led multi-vendor operations, resolved 3,000+ critical incidents, delivered 95% FCR, and built analytics for TAT, SLA breach prediction, hops, profitability, and opex.</p>
+          </article>
+          <article>
+            <span>Oct 2020 - Dec 2022</span>
+            <h3>L2 Technical Engineer - RAN Integration Specialist · Huawei Technologies India</h3>
+            <p>Executed 5G SA site integrations with 99.8% accuracy, automated license management, and managed 500+ approved KCP change requests.</p>
+          </article>
+          <article>
+            <span>Aug 2018 - Sep 2020</span>
+            <h3>Senior IoT Engineer - Asset Performance Management · L&amp;T Technology Services</h3>
+            <p>Designed IoT monitoring solutions with Teltonika gateways, predictive maintenance, 95% uptime, and zero escalations.</p>
+          </article>
+          <article>
+            <span>Dec 2013 - Aug 2018</span>
+            <h3>BSS Engineer - Network Operations Specialist · ZTE Telecom India</h3>
+            <p>Managed 1,000+ BTS and microwave installations, improved KPIs by 25%, and delivered BSNL GU Lot-2 project work worth ₹50+ crores.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Major Projects</div>
+            <h2>Analytics systems with measurable business outcomes.</h2>
+          </div>
+          <p>Hover or tap a card to play the supporting cinematic clip.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <video muted loop playsinline preload="metadata" poster="./assets/portrait.png">
+              <source src="./assets/network-events.mp4" type="video/mp4" />
+            </video>
+            <h3>Telecom Ticket Handling Dashboard</h3>
+            <p>End-to-end lifecycle analytics that improved turnaround time by 22% and reduced SLA breaches by 14%.</p>
+          </article>
+          <article class="project-card">
+            <video muted loop playsinline preload="metadata" poster="./assets/portrait.png">
+              <source src="./assets/analytics-room.mp4" type="video/mp4" />
+            </video>
+            <h3>Ticket Hops Reduction System</h3>
+            <p>SQL and DAX model that exposed routing inefficiencies and reduced ticket hops by 31%.</p>
+          </article>
+          <article class="project-card">
+            <video muted loop playsinline preload="metadata" poster="./assets/portrait.png">
+              <source src="./assets/smart-city.mp4" type="video/mp4" />
+            </video>
+            <h3>Opex / Capex Profitability Dashboard</h3>
+            <p>Profitability insights and leakage analysis contributing to ₹1.4 Cr annual savings.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section intelligence-os" id="intelligence-os">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Signature System</div>
+            <h2>A portfolio built like an operations command center.</h2>
+          </div>
+          <p>
+            The story is not only experience. It is a repeatable way of converting alarms,
+            tickets, costs, and research into decisions.
+          </p>
+        </div>
+        <div class="os-grid">
+          <article class="os-card wide">
+            <span>01 · Signal Capture</span>
+            <h3>Ingest alarms, tickets, change requests, and network KPIs.</h3>
+            <p>Multi-vendor operational context from Ericsson ENM, Huawei U2000/U2020, ZTE OMC-R, Nokia NetAct, BigQuery, Hive, and SQL sources.</p>
+          </article>
+          <article class="os-card">
+            <span>02 · Model</span>
+            <h3>Shape high-volume data into trustworthy Power BI models.</h3>
+            <p>Lifecycle views, SLA flags, hop logic, opex/capex mapping, and executive KPIs.</p>
+          </article>
+          <article class="os-card">
+            <span>03 · Predict</span>
+            <h3>Use AI to frame questions before dashboards are built.</h3>
+            <p>Gemini for ideation, Perplexity for sourced research, Claude for synthesis and documentation.</p>
+          </article>
+          <article class="os-card wide">
+            <span>04 · Act</span>
+            <h3>Deliver measurable operational movement.</h3>
+            <p>Reduced ticket hops by 31%, improved turnaround by 22%, lowered SLA violations by 14%, and identified ₹1.4 Cr annual savings.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section ai-workflow" id="ai-workflow">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">AI Workflow</div>
+            <h2>From account creation to practical AI-assisted delivery.</h2>
+          </div>
+          <p>
+            A current, tool-aware workflow for using Gemini, Perplexity, and Claude to research,
+            compare, draft, and refine analytics work.
+          </p>
+        </div>
+
+        <div class="ai-flow" aria-label="AI onboarding workflow">
+          <article>
+            <span>01</span>
+            <h3>Create or sign in</h3>
+            <p>Start with verified accounts so chats, research threads, and prompt history can be saved and reused.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Collect and compare</h3>
+            <p>Use AI search and model comparison to gather context, validate assumptions, and identify gaps.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Build and document</h3>
+            <p>Convert findings into dashboards, portfolio copy, prompts, SOPs, and stakeholder-ready summaries.</p>
+          </article>
+        </div>
+
+        <div class="ai-tool-grid">
+          <article class="ai-tool-card active" data-ai-tool="gemini">
+            <button type="button" aria-label="Show Gemini workflow details">
+              <span>Gemini</span>
+              <small>Google AI for writing, planning, learning, and multimodal work.</small>
+            </button>
+          </article>
+          <article class="ai-tool-card" data-ai-tool="perplexity">
+            <button type="button" aria-label="Show Perplexity workflow details">
+              <span>Perplexity</span>
+              <small>AI answer engine for cited research, discovery, and comparison.</small>
+            </button>
+          </article>
+          <article class="ai-tool-card" data-ai-tool="claude">
+            <button type="button" aria-label="Show Claude workflow details">
+              <span>Claude</span>
+              <small>Conversational assistant for analysis, drafting, coding, and iteration.</small>
+            </button>
+          </article>
+        </div>
+
+        <div class="ai-detail" id="aiDetail" aria-live="polite"></div>
+
+        <div class="prompt-lab">
+          <div>
+            <div class="section-kicker">Prompt Lab</div>
+            <h3>Reusable AI prompts for telecom analytics work.</h3>
+            <p>
+              Select a mission and the page generates a polished prompt pattern that can be
+              adapted for Gemini, Perplexity, or Claude.
+            </p>
+          </div>
+          <div class="prompt-panel">
+            <div class="prompt-actions" aria-label="Prompt missions">
+              <button class="prompt-chip active" type="button" data-prompt="sla">SLA Risk</button>
+              <button class="prompt-chip" type="button" data-prompt="hops">Ticket Hops</button>
+              <button class="prompt-chip" type="button" data-prompt="opex">Opex Leakage</button>
+            </div>
+            <pre id="promptOutput"></pre>
+          </div>
+        </div>
+
+        <div class="source-strip">
+          <span>Verified from official help pages:</span>
+          <a href="https://support.google.com/gemini/answer/13278668?hl=en-CA">Gemini Apps Help</a>
+          <a href="https://hub-prod.perplexity.ai/hub/faq/log-in-account">Perplexity Help</a>
+          <a href="https://support.claude.com/en/articles/8114491-get-started-with-claude">Claude Help Center</a>
+        </div>
+      </section>
+
+      <section class="section credentials" id="education">
+        <div>
+          <div class="section-kicker">Education</div>
+          <h2>B.E. Electronics &amp; Communication Engineering</h2>
+          <p>Sai Vidya Institute of Technology, Bangalore · 2013</p>
+        </div>
+        <div>
+          <div class="section-kicker">Certifications &amp; Honors</div>
+          <ul class="chips">
+            <li>Docker &amp; Kubernetes Practitioner</li>
+            <li>Git/GitHub Advanced Certification</li>
+            <li>AI Prompt Engineering &amp; BI Automation</li>
+            <li>Huawei HCNP - In Progress</li>
+            <li>Star Performer Award 2023-2024</li>
+            <li>Technical Automation Innovation Award</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Bangalore, Karnataka, India</p>
+      <a href="mailto:iamranganath222@gmail.com">iamranganath222@gmail.com</a>
+      <a href="tel:+919663888277">+91 96638 88277</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
