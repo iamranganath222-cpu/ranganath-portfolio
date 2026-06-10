@@ -38,6 +38,7 @@ const skills = {
     ["Perplexity Source Review", 82],
     ["Claude Draft Iteration", 86],
     ["BI Automation Ideation", 84],
+    ["Khoj Second Brain", 78],
   ],
 };
 
@@ -68,6 +69,15 @@ const aiTools = {
       "Best portfolio fit: refine prompts, draft documentation, analyze long requirements, explain SQL/DAX logic, and iterate on portfolio copy conversationally.",
     output:
       "Portfolio outcome: cleaner technical writing, sharper problem framing, and reusable prompt patterns for analytics and automation projects.",
+  },
+  khoj: {
+    title: "Khoj second brain and workflow",
+    setup:
+      "Self-host Khoj on your own server or use khoj.dev. Sign in with Google or email. Connect notes, documents, and data sources for indexed, persistent memory.",
+    use:
+      "Best portfolio fit: maintain research context across sessions, retrieve past analytics findings instantly, and run agents that surface SLA risk patterns and opex insights on demand.",
+    output:
+      "Portfolio outcome: zero context loss between sessions, faster hypothesis validation against prior work, and a continuously improving knowledge base for telecom and analytics research.",
   },
 };
 

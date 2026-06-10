@@ -743,7 +743,7 @@ h3 {
 
 .ai-tool-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-bottom: 16px;
 }
@@ -862,6 +862,45 @@ h3 {
   margin: 0;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.second-brain {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(117, 212, 155, 0.14), transparent 28%),
+    radial-gradient(circle at 20% 72%, rgba(95, 201, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, #080c0f, #07090c);
+}
+
+.brain-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(5, 8, 11, 0.58);
+  overflow: hidden;
+}
+
+.brain-stats div {
+  padding: 20px 22px;
+  border-right: 1px solid var(--line);
+}
+
+.brain-stats div:last-child {
+  border-right: 0;
+}
+
+.brain-stats strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--green);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.brain-stats span {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .source-strip {
@@ -1051,8 +1090,18 @@ footer p {
   .os-grid,
   .ai-flow,
   .ai-tool-grid,
-  .ai-detail {
+  .ai-detail,
+  .brain-stats {
     grid-template-columns: 1fr;
+  }
+
+  .brain-stats div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brain-stats div:last-child {
+    border-bottom: 0;
   }
 
   .os-card.wide {
